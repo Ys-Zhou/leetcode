@@ -1,6 +1,5 @@
 # 25 / 25 test cases passed.
 # Runtime: 65 ms
-
 import itertools
 
 
