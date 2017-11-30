@@ -1,5 +1,6 @@
 # 25 / 25 test cases passed.
 # Runtime: 65 ms
+# Check Permutation_II if you want to know the algorithm
 import itertools
 
 
