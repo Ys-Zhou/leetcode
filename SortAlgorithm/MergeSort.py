@@ -19,8 +19,8 @@ def merge_sort(nums):
     list_ = [[x] for x in nums]
     while len(list_) > 1:
         list_n = []
-        for i in xrange(len(list_) / 2):
-            list_n.append(merge(list_[2 * i], list_[2 * i + 1]))
+        for i in xrange(1, len(list_), 2):
+            list_n.append(merge(list_[i - 1], list_[i]))
         if len(list_) % 2:
             list_n.append(list_[-1])
         list_ = list_n
