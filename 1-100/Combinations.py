@@ -1,4 +1,5 @@
-# Correct but TLE
+# Runtime: 124 ms, faster than 98.29% of Python online submissions
+from itertools import combinations
 
 
 class Solution(object):
@@ -8,10 +9,4 @@ class Solution(object):
         :type k: int
         :rtype: List[List[int]]
         """
-
-        def getcom(rest):
-            if rest == 1:
-                return [[x] for x in xrange(1, n + 1)]
-            return [x + [y] for x in getcom(rest - 1) for y in xrange(x[-1] + 1, n + 1)]
-
-        return getcom(k)
+        return [list(x) for x in combinations(xrange(1, n + 1), k)]
