@@ -13,10 +13,10 @@ class Solution(object):
         if not nums or len(nums) < 4:
             return []
         sum_ab = dict()
-        for a in range(0, le - 3):
+        for a in xrange(0, le - 3):
             if a > 0 and nums[a] == nums[a - 1]:
                 continue
-            for b in range(a + 1, le - 2):
+            for b in xrange(a + 1, le - 2):
                 if b > a + 1 and nums[b] == nums[b - 1]:
                     continue
                 sum_k = nums[a] + nums[b]
@@ -25,10 +25,10 @@ class Solution(object):
                 else:
                     sum_ab.setdefault(sum_k, [[a, b]])
         re = []
-        for d in range(le - 1, 2, -1):
+        for d in xrange(le - 1, 2, -1):
             if d < le - 1 and nums[d] == nums[d + 1]:
                 continue
-            for c in range(d - 1, 1, -1):
+            for c in xrange(d - 1, 1, -1):
                 if c < d - 1 and nums[c] == nums[c + 1]:
                     continue
                 sum_k = target - (nums[c] + nums[d])
